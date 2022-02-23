@@ -31,13 +31,14 @@ class _AddTodoState extends State<AddTodo> {
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   //color: Colors.red,
+                  border: Border.all(),
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: TextFormField(
                   controller: _task,
                   decoration: const InputDecoration(
                     border: InputBorder.none,
-                    hintText: 'data',
+                    hintText: 'Todo Task',
                   ),
                 ),
               ),

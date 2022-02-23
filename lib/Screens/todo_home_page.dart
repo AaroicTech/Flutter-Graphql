@@ -26,7 +26,7 @@ class _TodoHomePageState extends State<TodoHomePage> {
               child: Column(
                 children: [
                   Container(
-                    margin: const EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(15),
                     child: const Text('Available todo'),
                   ),
                   Expanded(
@@ -37,7 +37,8 @@ class _TodoHomePageState extends State<TodoHomePage> {
                             return ListTile(
                               contentPadding: const EdgeInsets.all(0),
                               leading: const CircleAvatar(),
-                              title: const Text('Todo List'),
+                              title: const Text('Todo Title'),
+                              subtitle: const Text('Todo time'),
                               trailing: IconButton(
                                 onPressed: () {},
                                 icon: const Icon(Icons.delete),
@@ -48,23 +49,41 @@ class _TodoHomePageState extends State<TodoHomePage> {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 270),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => AddTodo(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        height: 50,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Center(
+                          child: const Text('Add todo'),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 80),
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (_) => AddTodo(),
-            ),
-          );
-        },
-        child: const Text('todo'),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+
+      // ),
     );
   }
 }
