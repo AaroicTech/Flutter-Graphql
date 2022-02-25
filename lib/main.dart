@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:graphql_todo_app/Screens/todo_home_page.dart';
 
-void main() {
- // HiveStore.openBox;
+void main()async{
+ await initHiveForFlutter();
   runApp(const MyApp());
 }
 

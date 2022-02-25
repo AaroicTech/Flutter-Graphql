@@ -67,8 +67,8 @@ class _TodoHomePageState extends State<TodoHomePage> {
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        child: Center(
-                          child: const Text('Add todo'),
+                        child:const  Center(
+                          child:  Text('Add todo'),
                         ),
                       ),
                     ),
